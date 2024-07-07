@@ -43,7 +43,7 @@ const SignInForm = () => {
             if (error.code === 'auth/invalid-credential') {
                 alert('Sign in failed');
             } else {
-                console.log('user creation encountered an error', error);
+                console.log(error);
             }
         }
     };
@@ -82,7 +82,9 @@ const SignInForm = () => {
 
                 <div className='buttons-container'>
                     <Button type='submit'>Sign In</Button>
-                    <Button buttonType='google' onClick={signInWithGoogle}>Sign in with Google</Button>
+                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>
+                        Sign in with Google
+                    </Button>
                 </div>
             </form>
         </div>
